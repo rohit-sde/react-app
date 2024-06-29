@@ -16,11 +16,17 @@ function App() {
         });
     };
 
+    const removeTodoHandler = (todoId: string) => {
+        setTodos((prevTodos) => {
+            return prevTodos.filter((todo) => todo.id !== todoId);
+        });
+    };
+
     // const todos = [new Todo("Learn React"), new Todo("Learn TypeScript")];
     return (
         <div>
             <NewTodo onAddTodo={addTodoHandler} />
-            <Todos items={todos} />
+            <Todos items={todos} onRemoveTodo={removeTodoHandler} />
         </div>
     );
 }
