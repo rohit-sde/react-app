@@ -1,7 +1,7 @@
 import Todos from "./components/Todos";
 import Todo from "./models/todo";
 
-import "./App.css";
+// import "./App.css";
 import NewTodo from "./components/NewTodo";
 import { useState } from "react";
 
